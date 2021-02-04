@@ -1,27 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import {Route, Link, Switch} from 'react-router-dom'
+// import components
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>TUNR.</h1>
+      <h4>FOR ALL YOUR PLAYLIST NEEDS</h4>
+      <hr />
+      <main>
+        <Switch>
+          <Route 
+            exact
+            path='/'
+            render={(rp) =>
+              <div>
+                <List label="PLAYLIST 1" />
+                <List label="FAVORITE SONGS LIST" />
+                <Form />
+              </div>}>
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 
-  
+
 
 
 }
