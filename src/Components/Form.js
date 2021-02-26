@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-const Form = ({createSong, history, emptySong}) => {
+const Form = ({createSong, emptySong}) => {
 
     const [newSong, setNewSong] = useState(emptySong)
 

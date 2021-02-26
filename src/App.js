@@ -1,4 +1,3 @@
-
 import './App.css';
 import React, {useEffect, useState} from 'react'
 import {Route, Switch} from 'react-router-dom'
@@ -15,8 +14,7 @@ function App() {
   }
 
   const [data, setData] = useState()
-
-
+  
   const makeAPICall = async () => {
     try {
       const res = await fetch('https://disney-tunr.herokuapp.com/playlists')
@@ -30,7 +28,6 @@ function App() {
   useEffect(() => {
     makeAPICall()
   }, [])
-  // console.log('json data', data)
 
   const createSong = (newSong) => {
     fetch('https://disney-tunr.herokuapp.com/songs', {
@@ -40,11 +37,23 @@ function App() {
       },
       body: JSON.stringify(newSong)
     })
+    .then((data) => {
+      makeAPICall(data)
+    })
   }
 
-  // const favoriteSong = () => {
-
-  // }
+  const favoriteSong = (song) => {
+    fetch('https://disney-tunr.herokuapp.com/songs/' + song.id, {
+      method: "put",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(song)
+    })
+    .then((data) => {
+      makeAPICall(data)
+    })
+  }
 
 
   const deleteSong = (song) => {
@@ -68,19 +77,18 @@ function App() {
               <div>
                 {
                   data !== undefined ?
-                  // data.map((playlist, index) => {
-                  //   // console.log(playlist)
-                  //   return (
+                  data.map((playlist, index) => {
+                    return (
                       <div>
                         <List 
-                          // playlist={playlist}
-                          playlist={data[1]}
-                          // key={index}
+                          playlist={playlist}
+                          key={index}
+                          favoriteSong={favoriteSong}
                           deleteSong={deleteSong}
                         />
                       </div>
-                  //   )
-                  // })
+                    )
+                  })
                   : ""
                 }
                 <Form createSong={createSong} emptySong={emptySong} />
@@ -90,10 +98,6 @@ function App() {
       </main>
     </div>
   );
-
-
-
-
 }
 
 export default App;

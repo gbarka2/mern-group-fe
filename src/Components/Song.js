@@ -1,37 +1,26 @@
 import React from "react"
-import { Route } from "react-router-dom"
 
-const Song = ({song, deleteSong}) => {
-    console.log(song)
+const Song = ({song, favoriteSong, deleteSong}) => {
 
+    const handleFavorite = (song) => {
+        if (song.playlist_id === 1) {
+            song.playlist_id = 2
+            favoriteSong(song)
+        } else {
+            song.playlist_id = 1
+            favoriteSong(song)
+        }
+    }
 
-
-
-
-
-
-
-    // {
-    //     song !== undefined ?
-
-        return (
+    return (
         <div className="song">
-            {/* <p>{song.title}</p> */}
-            <p>Artist Name</p>
-            <p>Length</p>
-            <button>Add To Favorites</button>
+            <p>{song.title}</p>
+            <p>{song.artist}</p>
+            <p>{song.time}</p>
+            <button onClick={() => {handleFavorite(song)}}>Favorite</button>
             <button onClick={() => {deleteSong(song)}}>Delete Song</button>
         </div>
         )
-    //     : "No Songs"
-    // }
 }
 
 export default Song
-
-// <div>
-// <p>{song.title}</p>
-// <p>Artist Name</p>
-// <p>Length</p>
-// <p>Favorite heart</p>
-// </div>
