@@ -23,6 +23,7 @@ const Form = ({createSong, emptySong}) => {
                     <input 
                         type="text" 
                         name="title"
+                        placeholder="Title"
                         value={newSong.title}
                         onChange={handleChange}
                     />
@@ -32,6 +33,7 @@ const Form = ({createSong, emptySong}) => {
                     <input 
                         type="text" 
                         name="artist"
+                        placeholder="Artist"
                         value={newSong.artist}
                         onChange={handleChange}
                     />
@@ -41,6 +43,7 @@ const Form = ({createSong, emptySong}) => {
                     <input 
                         type="text" 
                         name="time"
+                        placeholder="Song Length"
                         value={newSong.time}
                         onChange={handleChange}
                     />
