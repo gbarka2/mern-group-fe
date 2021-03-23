@@ -65,9 +65,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className="title-container">
         <h1>DISNEY TUNR.</h1>
-      <h3>Be Our Guests...</h3>
-      <hr></hr>
+        <h3>Be Our Guests</h3>
+      </div>
       <main>
         <Switch>
           <Route 
