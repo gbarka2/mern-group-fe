@@ -22,7 +22,11 @@ const Song = ({song, favoriteSong, deleteSong}) => {
             </div>
             <div className="song-button-div">
                 <button onClick={() => {deleteSong(song)}}>Delete</button>
-                <button onClick={() => {handleFavorite(song)}}>Favorite</button>
+                {
+                    song.playlist_id === 1 ?
+                    <button onClick={() => {handleFavorite(song)}}>Favorite</button>
+                    : <button onClick={() => {handleFavorite(song)}}>Unfavorite</button>
+                }
             </div>
         </div>
         )
