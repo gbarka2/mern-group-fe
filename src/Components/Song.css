@@ -13,6 +13,19 @@
 
 .song-div p {
   margin: 0 0 3px 0;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid aqua;
   font-size: 12px;
+}
+
+button {
+  background-color: navy;
+  border: none;
+  width: 30px;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
