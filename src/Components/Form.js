@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import "./Form.css"
 
 const Form = ({createSong, emptySong}) => {
 
@@ -15,38 +15,38 @@ const Form = ({createSong, emptySong}) => {
     }
 
     return(
-        <div>
+        <div className="form-container">
             <h3>Add a New Song</h3>
-            <form>
-                <div>
-                    <input 
-                        type="text" 
-                        name="title"
-                        placeholder="Title"
-                        value={newSong.title}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <input 
-                        type="text" 
-                        name="artist"
-                        placeholder="Artist"
-                        value={newSong.artist}
-                        onChange={handleChange}
-                    />
-                </div>
-                    <input 
-                        type="text" 
-                        name="time"
-                        placeholder="Song Length"
-                        value={newSong.time}
-                        onChange={handleChange}
-                    />
-                <div>
-                    <input type="submit" onClick={handleSubmit}/> 
-                </div>
-            </form>
+            <div>
+                <form>
+                    <div className="text-container">
+                        <input 
+                            type="text" 
+                            name="title"
+                            placeholder="Title"
+                            value={newSong.title}
+                            onChange={handleChange}
+                        />
+                        <input 
+                            type="text" 
+                            name="artist"
+                            placeholder="Artist"
+                            value={newSong.artist}
+                            onChange={handleChange}
+                        />
+                        <input 
+                            type="text" 
+                            name="time"
+                            placeholder="Song Length"
+                            value={newSong.time}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="submit-container">
+                        <input type="submit" onClick={handleSubmit}/> 
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
