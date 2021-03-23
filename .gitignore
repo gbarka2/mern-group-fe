@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+/tunr_app_api
+/Presentations-Interview-Questions.md
+/Rails-Heroku-Deployment.md
+/Rails-JWT-Auth.md
 
 # testing
 /coverage
