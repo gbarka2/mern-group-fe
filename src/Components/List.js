@@ -5,7 +5,7 @@ import Song from './Song'
 const List = ({playlist, favoriteSong, deleteSong}) => {
     
     return (
-        <div>
+        <div className="playlist-div">
             <h2>{playlist.name} Playlist</h2>
             {
                 playlist !== undefined ?

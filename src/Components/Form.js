@@ -19,7 +19,6 @@ const Form = ({createSong, emptySong}) => {
             <h3>Add a New Song</h3>
             <form>
                 <div>
-                    <label for="title">Title</label><br/>
                     <input 
                         type="text" 
                         name="title"
@@ -29,7 +28,6 @@ const Form = ({createSong, emptySong}) => {
                     />
                 </div>
                 <div>
-                    <label for="artist">Artist</label><br/>
                     <input 
                         type="text" 
                         name="artist"
@@ -38,8 +36,6 @@ const Form = ({createSong, emptySong}) => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
-                    <label for="time">Time</label><br/>
                     <input 
                         type="text" 
                         name="time"
@@ -47,7 +43,6 @@ const Form = ({createSong, emptySong}) => {
                         value={newSong.time}
                         onChange={handleChange}
                     />
-                </div>
                 <div>
                     <input type="submit" onClick={handleSubmit}/> 
                 </div>

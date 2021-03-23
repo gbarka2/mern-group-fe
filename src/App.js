@@ -67,14 +67,15 @@ function App() {
     <div className="App">
         <h1>DISNEY TUNR.</h1>
       <h3>Be Our Guests...</h3>
-      <hr />
+      <hr></hr>
       <main>
         <Switch>
           <Route 
             exact
             path='/'
             render={(rp) =>
-              <div>
+              <div className="main-container">
+                <div className="playlist-container">
                 {
                   data !== undefined ?
                   data.map((playlist, index) => {
@@ -91,7 +92,10 @@ function App() {
                   })
                   : ""
                 }
-                <Form createSong={createSong} emptySong={emptySong} />
+                </div>
+                <div className="form-div">
+                  <Form createSong={createSong} emptySong={emptySong} />
+                </div>
               </div>}>
           </Route>
         </Switch>
