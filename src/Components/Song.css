@@ -1,0 +1,18 @@
+.song-div {
+  width: 250px;
+}
+
+.song-content-div {
+  margin: 10px 0 5px 0;
+}
+
+.song-button-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.song-div p {
+  margin: 0 0 3px 0;
+  border-bottom: 1px solid red;
+  font-size: 12px;
+}
