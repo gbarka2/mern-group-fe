@@ -4,6 +4,8 @@ import {Route, Switch} from 'react-router-dom'
 import Form from './Components/Form'
 import List from './Components/List'
 
+
+
 function App() {
 
   const emptySong = {
@@ -65,9 +67,10 @@ function App() {
 
   return (
     <div className="App">
-        <h1>DISNEY TUNR.</h1>
-      <h3>Be Our Guests...</h3>
-      <hr></hr>
+      <div className="title-container">
+        <h1><span>DISNEY</span> TUNR.</h1>
+        <h3>Be Our Guests</h3>
+      </div>
       <main>
         <Switch>
           <Route 
