@@ -9,6 +9,7 @@ const Form = ({createSong, emptySong}) => {
         if (newSong.title !== "" && newSong.artist !== "" && newSong.time !== "") {
             event.preventDefault()
             createSong(newSong)
+            setNewSong(emptySong)
         } else if (newSong.title === "" && newSong.artist === "" && newSong.time === "") {
             event.preventDefault()
             alert("Oops! Please enter your song's title, artist, length!")

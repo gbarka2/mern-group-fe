@@ -57,7 +57,6 @@ function App() {
     })
   }
 
-
   const deleteSong = (song) => {
     fetch('https://disney-tunr.herokuapp.com/songs/' + song.id, {method: 'delete'})
     .then((data) => {
