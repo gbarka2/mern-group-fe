@@ -31,6 +31,9 @@ form .text-container {
 
 form input {
   margin: 3px;
+  outline: none;
+  border-radius: 5px;
+  border: .5px solid #83B8FA;
 }
 
 input {
@@ -40,5 +43,10 @@ input {
 .submit-button {
   background-color: #C3A765;
   border-radius: 10px;
-  
+  outline: none;
+}
+
+.submit-button:hover {
+  background-color: #83B8FA;
+  color: white;
 }

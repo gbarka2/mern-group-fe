@@ -5,6 +5,7 @@
   border-radius: 15px;
   padding: 5px;
   background-color: whitesmoke;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
 .song-content-div {
@@ -34,4 +35,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button:hover {
+  background-color: #83B8FA;
+  color: #C3A765;
 }
