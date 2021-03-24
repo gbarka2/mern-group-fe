@@ -6,8 +6,31 @@ const Form = ({createSong, emptySong}) => {
     const [newSong, setNewSong] = useState(emptySong)
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-        createSong(newSong)
+        if (newSong.title !== "" && newSong.artist !== "" && newSong.time !== "") {
+            event.preventDefault()
+            createSong(newSong)
+        } else if (newSong.title === "" && newSong.artist === "" && newSong.time === "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's title, artist, length!")
+        } else if (newSong.title !== "" && newSong.artist !== "" && newSong.time === "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's length!")
+        } else if (newSong.time !== "" && newSong.artist !== "" && newSong.title === "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's title!")
+        } else if (newSong.time !== "" && newSong.title !== "" && newSong.artist === "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's artist!")
+        } else if (newSong.time !== "" && newSong.title === "" && newSong.artist === "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's title and artist!")
+        } else if (newSong.time === "" && newSong.title !== "" && newSong.artist === "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's artist and time!")
+        } else if (newSong.time === "" && newSong.title === "" && newSong.artist !== "") {
+            event.preventDefault()
+            alert("Oops! Please enter your song's title and time!")
+        }
     }
 
     const handleChange = (event) => {
