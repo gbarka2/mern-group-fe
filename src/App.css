@@ -11,20 +11,28 @@ html {
 }
 
 .title-container {
-  color: navy;
-  background-color: aquamarine;
+  color: white;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(34,96,241,1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .title-container h1,
 .title-container h3 {
   margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.title-container h1 {
+.title-container h3 {
+  color: #2260f1;
+}
+
+.title-container span {
   margin-top: 15px;
+  font-family: Walter;
 }
 
 .main-container {
@@ -41,6 +49,5 @@ html {
 .form-div {
   position: fixed;
   bottom: 0;
-  /* height: 20%; */
   width: 100%;
 }

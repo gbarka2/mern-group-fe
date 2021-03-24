@@ -29,7 +29,7 @@ const Song = ({song, favoriteSong, deleteSong}) => {
                 {
                 song.playlist_id === 1 ?
                 <button className="favorite-button" onClick={() => {handleFavorite(song)}}><FontAwesomeIcon icon={faHeart} style={{color: 'white'}}/></button>
-                : <button className="favorite-button" onClick={() => {handleFavorite(song)}}><FontAwesomeIcon icon={faHeart} style={{color: 'aquamarine'}}/></button>
+                : <button className="favorite-button" onClick={() => {handleFavorite(song)}}><FontAwesomeIcon icon={faHeart} style={{color: '#2260F1'}}/></button>
                 }
             </div>
             

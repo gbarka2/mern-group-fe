@@ -1,8 +1,16 @@
 .playlist-div {
-  border: 1px green solid;
+  border: 1px #C3A765 solid;
+  border-radius: 10px;
   padding: 9px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgb(131,184,250);
+  background: radial-gradient(circle, rgba(131,184,250,1) 0%, rgba(255,255,255,1) 100%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.playlist-div h2 {
+  color: #2260F1;
 }

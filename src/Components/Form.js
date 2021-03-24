@@ -43,7 +43,7 @@ const Form = ({createSong, emptySong}) => {
                         />
                     </div>
                     <div className="submit-container">
-                        <input type="submit" onClick={handleSubmit}/> 
+                        <input className="submit-button" type="submit" onClick={handleSubmit}/> 
                     </div>
                 </form>
             </div>

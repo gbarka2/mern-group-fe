@@ -1,5 +1,10 @@
 .song-div {
   width: 250px;
+  border: 3px solid navy;
+  margin: 4px;
+  border-radius: 15px;
+  padding: 5px;
+  background-color: whitesmoke;
 }
 
 .song-content-div {
@@ -13,12 +18,13 @@
 
 .song-div p {
   margin: 0 0 3px 0;
-  border-bottom: 1px solid aqua;
-  font-size: 12px;
+  border-bottom: 1px solid #83B8FA;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 button {
-  background-color: navy;
+  background-color: #C3A765;
   border: none;
   width: 30px;
   padding: 5px;
