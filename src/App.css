@@ -71,18 +71,32 @@ html {
   .playlist-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .title-container {
     margin-bottom: 0;
   }
 
-  .playlist-container:first-child {
-    border: red;
+  .list-container:first-child {
+    width: 60%;
   }
 
-  .list-container:first-child {
-    width: 80%;
+  .list-container:nth-child(2) {
+    width: 40%;
+  }
+
+  .list-container:nth-child(2) .song-div {
+    width: 230px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .list-container:nth-child(2) .song-button-div {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
 }
