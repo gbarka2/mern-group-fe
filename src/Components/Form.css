@@ -50,3 +50,27 @@ input {
   background-color: #83B8FA;
   color: white;
 }
+
+@media screen and (min-width: 768px) {
+
+  .form-container {
+    border-top: none;
+    border-bottom: 1px solid #2260f1;
+  }
+
+  form .text-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  input {
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+}

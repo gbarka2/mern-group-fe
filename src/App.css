@@ -12,11 +12,8 @@ html {
 
 .title-container {
   color: white;
-  /* background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(34,96,241,1) 100%); */
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   align-items: center;
   padding-bottom: 40px;
   margin-bottom: 20px;
@@ -55,17 +52,8 @@ html {
 @media screen and (min-width: 768px) {
 
   .main-container {
-    /* display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 100%; */
     display: flex;
     flex-direction: column-reverse;
-
-  }
-
-  .form-div {
-    
   }
 
   .playlist-container {
@@ -91,10 +79,38 @@ html {
     height: 75px;
     display: flex;
     flex-direction: row;
-
   }
 
   .list-container:nth-child(2) .song-button-div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .title-container {
+    background-position: 45% 65%;
+  }
+
+}
+
+@media screen and (min-width: 1250px) {
+
+  .list-container:first-child {
+    width: 70%;
+    height: 100%;
+  }
+
+  .list-container:nth-child(2) {
+    width: 30%;
+
+  }
+
+  .list-container:first-child .song-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .list-container:first-child .song-button-div {
     display: flex;
     flex-direction: column-reverse;
   }
