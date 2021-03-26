@@ -82,7 +82,7 @@ function App() {
                   data !== undefined ?
                   data.map((playlist, index) => {
                     return (
-                      <div>
+                      <div className="list-container">
                         <List 
                           playlist={playlist}
                           key={index}

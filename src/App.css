@@ -12,22 +12,25 @@ html {
 
 .title-container {
   color: white;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(34,96,241,1) 100%);
+  /* background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(34,96,241,1) 100%); */
   display: flex;
   flex-direction: column;
+  /* justify-content: flex-end; */
   align-items: center;
+  padding-bottom: 40px;
   margin-bottom: 20px;
+  background-image: url(http://1.bp.blogspot.com/-5qtWSOGn9AI/UidRN5YaTCI/AAAAAAAAAYc/kEZYjs4fm8A/s1600/7951-disney-disney-characters.jpg);
+  object-fit: none;
+  background-repeat: no-repeat;
+  background-position: 55% 68%;
 }
 
 .title-container h1,
 .title-container h3 {
   margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.title-container h3 {
-  color: #2260f1;
+  text-shadow: -1px 1px 6px navy;
 }
 
 .title-container span {
@@ -43,11 +46,43 @@ html {
 .playlist-container {
   overflow: scroll;
   height: 80%;
-  margin-bottom: 150px;
 }
 
 .form-div {
-  position: fixed;
-  bottom: 0;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .main-container {
+    /* display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%; */
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  .form-div {
+    
+  }
+
+  .playlist-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title-container {
+    margin-bottom: 0;
+  }
+
+  .playlist-container:first-child {
+    border: red;
+  }
+
+  .list-container:first-child {
+    width: 80%;
+  }
+
 }
