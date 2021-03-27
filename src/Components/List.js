@@ -2,7 +2,6 @@ import React from "react"
 import Song from './Song'
 import "./List.css"
 
-
 const List = ({playlist, favoriteSong, deleteSong}) => {
     
     return (
