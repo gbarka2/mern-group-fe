@@ -9,7 +9,6 @@ const Song = ({song, favoriteSong, deleteSong}) => {
     const handleFavorite = (song) => {
         if (song.playlist_id === 1) {
             song.playlist_id = 2
-            // song.color = 'red'
             favoriteSong(song)
         } else {
             song.playlist_id = 1
